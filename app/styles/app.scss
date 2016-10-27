@@ -1,9 +1,14 @@
 $c-primary: #2e3e4e;
 $c-white: #eee;
+$c-black: #000;
 
 $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 @import 'font-awesome/scss/font-awesome';
 @import 'box-sizing';
 @import 'reset';
 @import 'layout';
-@import 'navbar';
+@import 'components/navbar';
+@import 'components/sidebar';
+@import 'components/main';
+@import 'components/characters';
+@import 'components/comics';

@@ -6,10 +6,8 @@
   &__content {
     display: flex;
     flex-wrap: wrap;
-
-    &--containr {
-      max-width: 35rem;
-      margin: 0 auto;
-    }
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 50rem;
   }
 }

@@ -1,0 +1,19 @@
+.characters {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
+
+  &__pic {
+    border-radius: 0.4rem;
+  }
+
+  &__group {
+    flex-basis: calc(100% / 4 - 2rem);
+    flex-grow: 1;
+    margin: 1rem;
+  }
+
+  &__name {
+    font-size: 13px;
+  }
+}
