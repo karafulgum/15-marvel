@@ -31,3 +31,14 @@
     color: $c-white;
   }
 }
+
+@media (max-width: 420px) {
+  .comics {
+    margin: 0 -0.5rem;
+
+    &__group {
+      flex-basis: calc(100% / 2 - 1rem);
+      margin: 0.5rem;
+    }
+  }
+}

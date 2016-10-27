@@ -9,3 +9,8 @@
     font-size: 1.5rem;
   }
 }
+@media (max-width: 420px) {
+  .main {
+    width: 60%;
+  }
+}

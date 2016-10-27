@@ -18,3 +18,14 @@
     font-size: 13px;
   }
 }
+
+@media (max-width: 420px) {
+  .characters {
+    margin: 0 -0.5rem;
+
+    &__group {
+      flex-basis: calc(100% / 2 - 1rem);
+      margin: 0.5rem;
+    }
+  }
+}

@@ -6,8 +6,16 @@
   &__content {
     display: flex;
     flex-wrap: wrap;
+    max-width: 50rem;
     margin: 0 auto;
     padding: 1rem;
-    max-width: 50rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .app {
+    &__content {
+      justify-content: center;
+    }
   }
 }
