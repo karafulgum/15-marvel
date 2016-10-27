@@ -1,0 +1,15 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+
+    &--containr {
+      max-width: 35rem;
+      margin: 0 auto;
+    }
+  }
+}

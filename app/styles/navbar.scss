@@ -1,0 +1,15 @@
+.navbar {
+  background: $c-primary;
+  font-family: 'Bangers', sans-serif;
+
+  &__container {
+    max-width: 35rem;
+    margin: 0 auto;
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0.5rem 0;
+    color: $c-white;
+  }
+}
