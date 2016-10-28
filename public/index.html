@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>15-marvel</title>
@@ -8,60 +9,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/app.css">
 </head>
+
 <body>
   <div class="app">
-  <div class="navbar">
-    <div class="navbar__container">
-      <p class="navbar__title">Marvel</p>
-      <div class="navbar__search">
-      <input type="text" placeholder="Search" class="navbar__input">
-      <i class="fa fa-search" aria-hidden="true"></i>
+
+    <div class="modal" v-if="modalDescription">
+      <div class="modal__card">
+        <p>{{ modalDescription }}</p>
       </div>
     </div>
-  </div>
+
+    <div class="navbar">
+      <div class="navbar__container">
+        <p class="navbar__title">Marvel</p>
+        <div class="navbar__search">
+          <input type="text" placeholder="Search" class="navbar__input">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
 
     <div class="app__content">
       <!-- <div class="app__content--container"> -->
 
-        <div class="sidebar">
-          <div class="sidebar__container">
-            <img class="sidebar__pic" v-bind:src="seriesData.thumbnail.path + '.' + seriesData.thumbnail.extension" v-bind:alt="seriesData.title">
-            <p class="sidebar__name">{{ seriesData.title }}</p>
-            <div class="sidebar__date">
+      <div class="sidebar">
+        <div class="sidebar__container">
+          <img class="sidebar__pic" v-bind:src="seriesData.thumbnail.path + '.' + seriesData.thumbnail.extension" v-bind:alt="seriesData.title">
+          <p class="sidebar__name">{{ seriesData.title }}</p>
+          <div class="sidebar__date">
             <p class="sidebar__date">{{ seriesData.startYear}} - {{ seriesData.endYear }}</p>
           </div>
-            <p class="sidebar__title">Creator</p>
-            <ul class="sidebar__creator">
-              <li class="sidebar__creator-item" v-for="creator in seriesData.creators.items">{{ creator.name }}</li>
-            </ul>
-          </div>
+          <p class="sidebar__title">Creator</p>
+          <ul class="sidebar__creator">
+            <li class="sidebar__creator-item" v-for="creator in seriesData.creators.items">{{ creator.name }}</li>
+          </ul>
         </div>
+      </div>
 
-        <div class="main">
-          <div class="main__container">
+      <div class="main">
+        <div class="main__container">
 
-            <p class="main__title">Characters</p>
-            <div class="characters">
-              <div class="characters__group" v-for="character in characters">
-                <div class="square">
+          <p class="main__title">Characters</p>
+          <div class="characters">
+            <div class="characters__group" v-for="character in characters">
+              <div class="square">
                 <img class="square__pic" v-bind:src="character.thumbnail.path + '.' + character.thumbnail.extension" v-bind:alt="character.name">
-                </div>
-                <p class="characters__name">{{ character.name }}</p>
               </div>
+              <p class="characters__name">{{ character.name }}</p>
             </div>
+          </div>
 
-            <p class="main__title">Comics</p>
-            <div class="comics">
-              <div class="comics__group" v-for="comic in comics">
-                <div class="square">
+          <p class="main__title">Comics</p>
+          <div class="comics">
+            <div class="comics__group" v-for="comic in comics">
+              <div class="square">
                 <img class="square__pic" v-bind:src="comic.thumbnail.path + '.' + comic.thumbnail.extension" v-bind:alt="comic.name">
               </div>
-                <p class="comics__issue">{{ comic.issueNumber}}</p>
-                <p class="comics__name"> {{ comic.title }} #8</p>
-                <button class="comics__btn">Read More</button>
-              </div>
+              <p class="comics__issue">{{ comic.issueNumber}}</p>
+              <p class="comics__name"> {{ comic.title }} </p>
+              <button class="comics__btn" v-on:click="showDescription(comic.description)">Read More</button>
             </div>
           </div>
+        </div>
         <!-- </div> -->
       </div>
     </div>
@@ -70,4 +79,5 @@
 
   <script src="/app.js" charset="utf-8"></script>
 </body>
+
 </html>

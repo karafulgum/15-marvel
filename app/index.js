@@ -11,6 +11,7 @@ const app = new Vue({
       seriesData: null,
       characters: null,
       comics: null,
+      modalDescription: false,
     };
   },
 
@@ -19,6 +20,10 @@ const app = new Vue({
   },
 
   methods: {
+    showDescription(description) {
+      this.modalDescription = description;
+    },
+
     searchSeries(series) {
       fetch(`http://gateway.marvel.com/v1/public/series?limit=1&titleStartsWith=${series}&apikey=${apikey}`)
             .then((r) => r.json())
