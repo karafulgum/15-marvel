@@ -12,6 +12,7 @@ const app = new Vue({
       characters: null,
       comics: null,
       modalDescription: false,
+      searchTerm: '',
     };
   },
 

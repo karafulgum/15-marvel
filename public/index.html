@@ -15,18 +15,18 @@
 
     <div class="modal" v-if="modalDescription">
       <div class="modal__card">
-        <button class="modal__btn" v-on:click="hideModal"><i class="fa fa-times" aria-hidden="true"></i></button>
-        <p>{{ modalDescription }}</p>
+        <button class="modal__btn" v-on:click="hideModal" type="submit"><i class="fa fa-times" aria-hidden="true"></i></button>
+        <p v-html="modalDescription"> {{ modalDescription }}</p>
       </div>
     </div>
 
     <div class="navbar">
       <div class="navbar__container">
         <p class="navbar__title">Marvel</p>
-        <div class="navbar__search">
-          <input type="text" placeholder="Search" class="navbar__input">
+        <form class="navbar__search" v-on:submit.prevent="searchSeries(searchTerm)">
+          <input type="text" placeholder="Search" class="navbar__input" v-model="searchTerm">
           <i class="fa fa-search" aria-hidden="true"></i>
-        </div>
+        </form>
       </div>
     </div>
 
@@ -56,6 +56,7 @@
               <div class="square">
                 <img class="square__pic" v-bind:src="character.thumbnail.path + '.' + character.thumbnail.extension" v-bind:alt="character.name">
               </div>
+
               <p class="characters__name">{{ character.name }}</p>
             </div>
           </div>
