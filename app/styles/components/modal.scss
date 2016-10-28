@@ -15,9 +15,12 @@
     padding: 1rem;
     background: $c-white;
   }
-}
 
-.fa-times {
-  display: flex;
-  justify-content: flex-end;
+  &__btn {
+    position: absolute;
+    top: 43%;
+    right: 11%;
+    border: 0;
+    background: $c-white;
+  }
 }

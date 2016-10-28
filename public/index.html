@@ -15,7 +15,7 @@
 
     <div class="modal" v-if="modalDescription">
       <div class="modal__card">
-        <i class="fa fa-times" aria-hidden="true"></i>
+        <button class="modal__btn" v-on:click="hideModal"><i class="fa fa-times" aria-hidden="true"></i></button>
         <p>{{ modalDescription }}</p>
       </div>
     </div>
