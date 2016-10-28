@@ -10,14 +10,9 @@
   }
 
   &__date {
-    display: flex;
     margin-top: 0.5rem;
     font-size: 12px;
     font-weight: bold;
-
-    &--dash {
-      padding: 0 0.2rem;
-    }
   }
 
   &__title {

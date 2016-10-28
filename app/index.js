@@ -25,6 +25,7 @@ const app = new Vue({
             .then((data) => {
               this.seriesData = data.data.results[0];
               this.searchCharacters(this.seriesData.id);
+              this.searchComics(this.seriesData.id);
             });
     },
     searchCharacters(id) {
@@ -35,7 +36,7 @@ const app = new Vue({
         });
     },
     searchComics(id) {
-      fetch(`http://gateway.marvel.com/v1/public/series/${id}/characters?apikey=${apikey}`)
+      fetch(`http://gateway.marvel.com/v1/public/series/${id}/comics?apikey=${apikey}`)
       .then((r) => r.json())
       .then((data) => {
         this.comics = data.data.results;

@@ -27,9 +27,7 @@
             <img class="sidebar__pic" v-bind:src="seriesData.thumbnail.path + '.' + seriesData.thumbnail.extension" v-bind:alt="seriesData.title">
             <p class="sidebar__name">{{ seriesData.title }}</p>
             <div class="sidebar__date">
-            <p class="sidebar__date">{{ seriesData.startYear}}</p>
-            <p class="sidebar__date sidebar__date--dash">-</p>
-            <p class="sidebar__date">{{ seriesData.endYear}}</p>
+            <p class="sidebar__date">{{ seriesData.startYear}} - {{ seriesData.endYear }}</p>
           </div>
             <p class="sidebar__title">Creator</p>
             <ul class="sidebar__creator">
@@ -43,82 +41,20 @@
 
             <p class="main__title">Characters</p>
             <div class="characters">
-              <div class="characters__group">
-                <img class="characters__pic" src="./images/mags.png" alt="">
-                <p class="characters__name">Maggie</p>
-              </div>
-              <div class="characters__group">
-                <img class="characters__pic" src="./images/mags.png" alt="">
-                <p class="characters__name">Maggie</p>
-              </div>
-              <div class="characters__group">
-                <img class="characters__pic" src="./images/mags.png" alt="">
-                <p class="characters__name">Maggie</p>
-              </div>
-              <div class="characters__group">
-                <img class="characters__pic" src="./images/mags.png" alt="">
-                <p class="characters__name">Maggie</p>
+              <div class="characters__group" v-for="character in characters">
+                <div class="square">
+                <img class="square__pic" v-bind:src="character.thumbnail.path + '.' + character.thumbnail.extension" v-bind:alt="character.name">
+                </div>
+                <p class="characters__name">{{ character.name }}</p>
               </div>
             </div>
 
             <p class="main__title">Comics</p>
             <div class="comics">
-              <div class="comics__group">
-                <img src="./images/mags.png" alt="" class="comics__pic">
-                <p class="comics__issue">#8</p>
-                <p class="comics__name">Spider-Girl (2010) #8</p>
-                <button class="comics__btn">Read More</button>
+              <div class="comics__group" v-for="comic in comics">
+                <div class="square">
+                <img class="square__pic" v-bind:src="comic.thumbnail.path + '.' + comic.thumbnail.extension" v-bind:alt="comic.name">
               </div>
-              <div class="comics__group">
-                <img src="./images/mags.png" alt="" class="comics__pic">
-                <p class="comics__issue">#8</p>
-                <p class="comics__name">Spider-Girl (2010) #8</p>
-                <button class="comics__btn">Read More</button>
-              </div>
-              <div class="comics__group">
-                <img src="./images/mags.png" alt="" class="comics__pic">
-                <p class="comics__issue">#8</p>
-                <p class="comics__name">Spider-Girl (2010) #8</p>
-                <button class="comics__btn">Read More</button>
-              </div>
-              <div class="comics__group">
-                <img src="./images/mags.png" alt="" class="comics__pic">
-                <p class="comics__issue">#8</p>
-                <p class="comics__name">Spider-Girl (2010) #8</p>
-                <button class="comics__btn">Read More</button>
-              </div>
-              <div class="comics__group">
-                <img src="./images/mags.png" alt="" class="comics__pic">
-                <p class="comics__issue">#8</p>
-                <p class="comics__name">Spider-Girl (2010) #8</p>
-                <button class="comics__btn">Read More</button>
-              </div>
-              <div class="comics__group">
-                <img src="./images/mags.png" alt="" class="comics__pic">
-                <p class="comics__issue">#8</p>
-                <p class="comics__name">Spider-Girl (2010) #8</p>
-                <button class="comics__btn">Read More</button>
-              </div>
-              <div class="comics__group">
-                <img src="./images/mags.png" alt="" class="comics__pic">
-                <p class="comics__issue">#8</p>
-                <p class="comics__name">Spider-Girl (2010) #8</p>
-                <button class="comics__btn">Read More</button>
-              </div>
-              <div class="comics__group">
-                <img src="./images/mags.png" alt="" class="comics__pic">
-                <p class="comics__issue">#8</p>
-                <p class="comics__name">Spider-Girl (2010) #8</p>
-                <button class="comics__btn">Read More</button>
-              </div>
-              <div class="comics__group">
-                <img src="./images/mags.png" alt="" class="comics__pic">
-                <p class="comics__issue">#8</p>
-                <p class="comics__name">Spider-Girl (2010) #8</p>
-                <button class="comics__btn">Read More</button>
-              </div>
-              <div class="comics__group">
-                <img src="./images/mags.png" alt="" class="comics__pic">
                 <p class="comics__issue">#8</p>
                 <p class="comics__name">Spider-Girl (2010) #8</p>
                 <button class="comics__btn">Read More</button>
