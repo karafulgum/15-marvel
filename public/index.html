@@ -24,17 +24,16 @@
 
         <div class="sidebar">
           <div class="sidebar__container">
-            <img class="sidebar__pic" src="./images/mags.png" alt="">
-            <p class="sidebar__name">Spider-Girl (2010 - 2011)</p>
-            <p class="sidebar__date">2010 - 2011</p>
+            <img class="sidebar__pic" v-bind:src="seriesData.thumbnail.path + '.' + seriesData.thumbnail.extension" v-bind:alt="seriesData.title">
+            <p class="sidebar__name">{{ seriesData.title }}</p>
+            <div class="sidebar__date">
+            <p class="sidebar__date">{{ seriesData.startYear}}</p>
+            <p class="sidebar__date sidebar__date--dash">-</p>
+            <p class="sidebar__date">{{ seriesData.endYear}}</p>
+          </div>
             <p class="sidebar__title">Creator</p>
             <ul class="sidebar__creator">
-              <li class="sidebar__creator-item">Tom Brennan</li>
-              <li class="sidebar__creator-item">Mike Del Mundo</li>
-              <li class="sidebar__creator-item">Clayton Henry</li>
-              <li class="sidebar__creator-item">Barry Kitson</li>
-              <li class="sidebar__creator-item">Jelena Kevic Djurdjevic</li>
-              <li class="sidebar__creator-item">Paul Tobin</li>
+              <li class="sidebar__creator-item" v-for="creator in seriesData.creators.items">{{ creator.name }}</li>
             </ul>
           </div>
         </div>
