@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>15-marvel</title>
   <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/app.css">
 </head>
@@ -55,8 +56,8 @@
                 <div class="square">
                 <img class="square__pic" v-bind:src="comic.thumbnail.path + '.' + comic.thumbnail.extension" v-bind:alt="comic.name">
               </div>
-                <p class="comics__issue">#8</p>
-                <p class="comics__name">Spider-Girl (2010) #8</p>
+                <p class="comics__issue">{{ comic.issueNumber}}</p>
+                <p class="comics__name"> {{ comic.title }} #8</p>
                 <button class="comics__btn">Read More</button>
               </div>
             </div>

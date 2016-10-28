@@ -3,10 +3,6 @@
   flex-wrap: wrap;
   margin: 0 -1rem;
 
-  &__pic {
-    border-radius: 0.4rem;
-  }
-
   &__group {
     flex-basis: calc(100% / 4 - 2rem);
     flex-grow: 1;
@@ -18,8 +14,12 @@
   }
 
   &__issue {
-    margin: 0.2rem 0;
+    margin: 0.5rem 0;
     font-size: 13px;
+
+    &::before {
+      content: '#';
+    }
   }
 
   &__btn {
