@@ -25,7 +25,7 @@
         <p class="navbar__title">Marvel</p>
         <form class="navbar__search" v-on:submit.prevent="searchSeries(searchTerm)">
           <input type="text" placeholder="Search" class="navbar__input" v-model="searchTerm">
-          <i class="fa fa-search" aria-hidden="true"></i>
+          <button class="navbar__btn"><i class="fa fa-search" aria-hidden="true"></i></button>
         </form>
       </div>
     </div>
@@ -64,11 +64,13 @@
           <p class="main__title">Comics</p>
           <div class="comics">
             <div class="comics__group" v-for="comic in comics">
+              <div class="comics__content">
               <div class="square">
                 <img class="square__pic" v-bind:src="comic.thumbnail.path + '.' + comic.thumbnail.extension" v-bind:alt="comic.name">
               </div>
-              <p class="comics__issue">{{ comic.issueNumber}}</p>
-              <p class="comics__name"> {{ comic.title }} </p>
+                <p class="comics__issue">{{ comic.issueNumber}}</p>
+                <p class="comics__name"> {{ comic.title }} </p>
+              </div>
               <button class="comics__btn" v-on:click="showDescription(comic.description)">Read More</button>
             </div>
           </div>

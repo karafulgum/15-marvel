@@ -28,11 +28,13 @@
   &__btn {
     border: 0;
     background: $c-white;
+    cursor: pointer;
   }
 
   &__input {
     height: 1rem;
     border: 0;
+    outline: 0;
     background: $c-white;
   }
 }

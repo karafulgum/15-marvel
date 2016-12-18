@@ -20,6 +20,9 @@
   &__btn {
     float: right;
     border: 0;
-    background: $c-white;
+    border-radius: 0.4rem;
+    background: $c-red;
+    color: $c-white;;
+    cursor: pointer;
   }
 }
