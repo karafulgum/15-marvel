@@ -5,20 +5,19 @@
   margin: 0 -1rem;
 
   &__group {
+    display: flex;
     flex-basis: calc(100% / 4 - 2rem);
+    flex-direction: column;
     margin: 1rem;
   }
 
   &__content {
-    display: flex;
-    flex-direction: column;
+    flex-grow: 1;
   }
 
   &__name {
-    height: 2rem;
     margin-top: 0;
     font-size: 13px;
-    text-overflow: ellipsis;
   }
 
   &__issue {
@@ -48,9 +47,8 @@
     &:focus {
       background: $c-red;
     }
-    }
+  }
 }
-
 @media (max-width: 720px) {
   .comics {
     margin: 0 -0.5rem;
