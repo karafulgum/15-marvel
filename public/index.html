@@ -22,7 +22,7 @@
 
     <div class="navbar">
       <div class="navbar__container">
-        <p class="navbar__title">Marvel</p>
+        <img src="../images/marvel.png" class="navbar__logo" alt="Marvel Logo">
         <form class="navbar__search" v-on:submit.prevent="searchSeries(searchTerm)">
           <input type="text" placeholder="Search" class="navbar__input" v-model="searchTerm">
           <button class="navbar__btn"><i class="fa fa-search" aria-hidden="true"></i></button>
@@ -40,7 +40,7 @@
           <div class="sidebar__date">
             <p class="sidebar__date">{{ seriesData.startYear}} - {{ seriesData.endYear }}</p>
           </div>
-          <p class="sidebar__title">Creator</p>
+          <p class="sidebar__title">Creators</p>
           <ul class="sidebar__creator">
             <li class="sidebar__creator-item" v-for="creator in seriesData.creators.items">{{ creator.name }}</li>
           </ul>

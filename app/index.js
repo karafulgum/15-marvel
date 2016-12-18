@@ -17,7 +17,7 @@ const app = new Vue({
   },
 
   mounted() {
-    this.searchSeries('deadpool');
+    this.searchSeries('spider-girl');
   },
 
   methods: {
