@@ -1,0 +1,32 @@
+.sidebar {
+  width: 25%;
+
+  &__pic {
+    border-radius: 0.4rem;
+  }
+
+  &__name {
+    margin: 0.5rem 0 0;
+  }
+
+  &__date {
+    margin-top: 0.5rem;
+    font-size: 12px;
+  }
+
+  &__title {
+    margin: 0;
+    border-bottom: 0.1rem solid $c-black;
+    font-family: 'Bangers', sans-serif;
+    font-size: 1.5rem;
+  }
+
+  &__creator {
+    font-size: 14px;
+  }
+}
+@media (max-width: 420px) {
+  .sidebar {
+    width: 30%;
+  }
+}

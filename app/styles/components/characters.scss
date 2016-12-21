@@ -1,0 +1,27 @@
+.characters {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
+
+  &__group {
+    flex-basis: calc(100% / 4 - 2rem);
+    flex-grow: 1;
+    margin: 1rem;
+  }
+
+  &__name {
+    margin: 0.5rem 0;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 720px) {
+  .characters {
+    margin: 0 -0.5rem;
+
+    &__group {
+      flex-basis: calc(100% / 2 - 1rem);
+      margin: 0.5rem;
+    }
+  }
+}

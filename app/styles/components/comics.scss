@@ -1,0 +1,65 @@
+.comics {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  margin: 0 -1rem;
+
+  &__group {
+    display: flex;
+    flex-basis: calc(100% / 4 - 2rem);
+    flex-direction: column;
+    margin: 1rem;
+  }
+
+  &__content {
+    flex-grow: 1;
+  }
+
+  &__name {
+    margin-top: 0;
+    font-size: 13px;
+  }
+
+  &__issue {
+    margin: 0.5rem 0;
+    font-size: 13px;
+
+    &::before {
+      content: '#';
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    padding: 0.3rem 0;
+    border: 0;
+    border-radius: 0.3rem;
+    outline: 0;
+    background: $c-primary;
+    color: $c-white;
+    cursor: pointer;
+
+    &:hover {
+      transition: background 0.5s;
+      background: $c-red;
+    }
+
+    &:focus {
+      background: $c-red;
+    }
+  }
+}
+@media (max-width: 720px) {
+  .comics {
+    margin: 0 -0.5rem;
+
+    &__group {
+      flex-basis: calc(100% / 2 - 1rem);
+      margin: 0.5rem;
+    }
+
+    // &__content {
+    //   min-height: 12rem;
+    // }
+  }
+}
